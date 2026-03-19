@@ -1,9 +1,12 @@
 export default function Home() {
   return (
     <main className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-6 text-center">
-      <h1 className="text-5xl md:text-7xl font-bold mb-4">
-        TerravaultIQ
-      </h1>
+      
+      <img 
+        src="/logo.png" 
+        alt="TerravaultIQ Logo"
+        className="w-80 md:w-[500px] mb-6"
+      />
 
       <p className="text-xl md:text-2xl text-gray-300 mb-4">
         Audience Intelligence Solutions
@@ -15,13 +18,14 @@ export default function Home() {
       </p>
 
       <div className="flex gap-4 flex-wrap justify-center">
-        <button className="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-xl font-semibold">
+        <button className="bg-green-500 hover:bg-green-600 px-6 py-3 rounded-xl font-semibold">
           Build Audience
         </button>
         <button className="border border-gray-600 hover:border-gray-400 px-6 py-3 rounded-xl font-semibold">
           Request Demo
         </button>
       </div>
+
     </main>
   );
 }
