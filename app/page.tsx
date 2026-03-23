@@ -1,143 +1,271 @@
 import Link from "next/link";
 
-const products = [
+const tools = [
   {
     title: "Lead Intelligence",
     description:
-      "Build prospect lists and uncover high-value opportunities for outreach and activation.",
-    border: "border-lime-500/30",
-    glow: "shadow-[0_0_30px_rgba(132,204,22,0.08)]",
+      "Build prospect lists, identify high-value opportunities, and organize lead data for outreach and activation.",
+    accent: "from-lime-100 to-white border-lime-200",
   },
   {
     title: "Audience Builder",
     description:
-      "Create activation-ready audiences using targeting logic, custom segments, and data inputs.",
-    border: "border-cyan-400/30",
-    glow: "shadow-[0_0_30px_rgba(34,211,238,0.08)]",
+      "Create custom activation-ready audiences using targeting logic, segmentation rules, and input datasets.",
+    accent: "from-cyan-100 to-white border-cyan-200",
   },
   {
     title: "Geo Intelligence",
     description:
-      "Target by radius, territory, and location intelligence for precise local marketing.",
-    border: "border-orange-400/30",
-    glow: "shadow-[0_0_30px_rgba(251,146,60,0.08)]",
+      "Target by radius, territory, ZIP, and location intelligence for precise local campaign execution.",
+    accent: "from-orange-100 to-white border-orange-200",
   },
   {
     title: "Lookback Intelligence",
     description:
-      "Reach audiences based on past visits, movement patterns, and behavioral location data.",
-    border: "border-emerald-500/30",
-    glow: "shadow-[0_0_30px_rgba(16,185,129,0.08)]",
+      "Reach audiences based on past visits, movement history, and behavioral location patterns.",
+    accent: "from-emerald-100 to-white border-emerald-200",
   },
   {
     title: "Ad Studio",
     description:
-      "Generate ad copy, creative prompts, and downloadable ad packages for fast activation.",
-    border: "border-yellow-400/30",
-    glow: "shadow-[0_0_30px_rgba(250,204,21,0.08)]",
+      "Generate ad copy, headlines, CTAs, creative prompts, and downloadable activation-ready packages.",
+    accent: "from-yellow-100 to-white border-yellow-200",
   },
 ];
 
-export default function Home() {
+export default function PlatformPage() {
   return (
-    <main className="min-h-screen bg-black text-white overflow-hidden">
-      <section className="relative px-6 pt-16 pb-20">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-10 left-1/2 -translate-x-1/2 h-80 w-80 rounded-full bg-cyan-400/10 blur-3xl" />
-          <div className="absolute top-24 left-[18%] h-64 w-64 rounded-full bg-lime-400/10 blur-3xl" />
-          <div className="absolute top-20 right-[16%] h-64 w-64 rounded-full bg-orange-400/10 blur-3xl" />
+    <main className="min-h-screen bg-[#f4f6f1] text-slate-900">
+      <header className="sticky top-0 z-50 bg-[#f4f6f1]/90 backdrop-blur border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-6">
+          <Link href="/" className="flex items-center gap-3">
+            <div className="bg-white rounded-2xl px-4 py-3 shadow-sm border border-slate-200">
+              <img
+                src="/logo.png"
+                alt="TerravaultIQ"
+                className="h-12 md:h-14 w-auto object-contain"
+              />
+            </div>
+          </Link>
+
+          <nav className="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-800">
+            <Link href="/" className="hover:text-teal-700 transition">Home</Link>
+            <a href="#tools" className="hover:text-teal-700 transition">Tools</a>
+            <a href="#workflow" className="hover:text-teal-700 transition">Workflow</a>
+            <a href="#offers" className="hover:text-teal-700 transition">Offers</a>
+          </nav>
+
+          <div className="flex items-center gap-3">
+            <button className="hidden md:inline-flex rounded-full border border-teal-700 text-teal-800 px-6 py-3 font-semibold hover:bg-teal-50 transition">
+              Login
+            </button>
+            <button className="rounded-full bg-lime-500 text-white px-6 py-3 font-semibold hover:bg-lime-600 transition shadow-[0_10px_30px_rgba(132,204,22,0.22)]">
+              Book Demo
+            </button>
+          </div>
         </div>
 
-        <div className="relative max-w-7xl mx-auto">
-          <div className="flex justify-center mb-10">
-            <img
-              src="/logo.png"
-              alt="TerravaultIQ"
-              className="w-[280px] md:w-[560px] h-auto"
-            />
-          </div>
+        <div className="h-[3px] bg-gradient-to-r from-cyan-500 via-lime-500 to-orange-400" />
+      </header>
 
-          <div className="text-center max-w-4xl mx-auto">
-            <div className="inline-flex items-center rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-gray-300 mb-6">
-              Audience Intelligence Solutions
-            </div>
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-10 left-0 h-[460px] w-[460px] rounded-full bg-cyan-200/40 blur-3xl" />
+          <div className="absolute top-12 right-0 h-[460px] w-[460px] rounded-full bg-lime-200/35 blur-3xl" />
+          <div className="absolute bottom-0 left-1/3 h-[320px] w-[320px] rounded-full bg-orange-100/30 blur-3xl" />
+        </div>
 
-            <h1 className="text-4xl md:text-7xl font-bold tracking-tight leading-tight mb-6">
-              Build and activate
-              <span className="block bg-gradient-to-r from-cyan-400 via-lime-400 to-orange-400 bg-clip-text text-transparent">
-                hyper-targeted audiences
-              </span>
-            </h1>
+        <div className="relative max-w-7xl mx-auto px-6 py-20 lg:py-24">
+          <div className="grid lg:grid-cols-2 gap-14 items-center">
+            <div>
+              <div className="inline-flex rounded-full bg-teal-100 text-teal-800 px-5 py-3 text-sm font-bold tracking-wide uppercase mb-8">
+                TerravaultIQ Platform
+              </div>
 
-            <p className="text-lg md:text-2xl text-gray-300 leading-relaxed mb-10">
-              Buy one tool or run the full platform. TerravaultIQ brings lead intelligence,
-              audience building, geo targeting, lookback activation, and ad creation into one
-              premium digital marketing system.
-            </p>
+              <h1 className="text-5xl md:text-7xl font-bold leading-[0.95] tracking-tight text-slate-900">
+                One system.
+                <br />
+                <span className="text-teal-500">Multiple tools.</span>
+                <br />
+                <span className="text-lime-500">One buyer story.</span>
+              </h1>
 
-            <div className="flex flex-wrap justify-center gap-4 mb-14">
-              <Link
-                href="/platform"
-                className="rounded-xl bg-lime-400 text-black px-6 py-3 font-bold hover:bg-lime-300 transition"
-              >
-                Open Platform
-              </Link>
+              <p className="mt-8 text-lg md:text-xl text-slate-700 max-w-2xl leading-relaxed">
+                TerravaultIQ lets buyers purchase standalone solutions or unlock the
+                full all-in-one platform for lead generation, audience creation,
+                geo targeting, lookback intelligence, and ad production.
+              </p>
 
-              <button className="rounded-xl border border-cyan-400/30 bg-cyan-400/10 px-6 py-3 font-semibold hover:bg-cyan-400/20 transition">
-                Request Demo
-              </button>
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6 mt-8">
-            {products.map((product) => (
-              <div
-                key={product.title}
-                className={`rounded-2xl border ${product.border} ${product.glow} bg-zinc-950/90 p-6 backdrop-blur-sm`}
-              >
-                <h2 className="text-2xl font-semibold mb-3">{product.title}</h2>
-                <p className="text-gray-400 mb-6">{product.description}</p>
+              <div className="mt-10 flex flex-wrap gap-4">
+                <button className="rounded-full bg-lime-500 text-white px-7 py-4 font-bold hover:bg-lime-600 transition shadow-[0_10px_30px_rgba(132,204,22,0.25)]">
+                  Request Pricing
+                </button>
                 <Link
-                  href="/platform"
-                  className="inline-flex rounded-xl border border-white/10 bg-black px-5 py-3 font-semibold hover:bg-zinc-900 transition"
+                  href="/"
+                  className="rounded-full border border-slate-300 bg-white px-7 py-4 font-semibold hover:bg-slate-50 transition"
                 >
-                  Learn More
+                  Back to Home
                 </Link>
+              </div>
+            </div>
+
+            <div>
+              <div className="rounded-[28px] bg-white/90 backdrop-blur border border-slate-200 shadow-[0_25px_80px_rgba(15,23,42,0.10)] p-8">
+                <div className="inline-flex rounded-full bg-teal-100 text-teal-800 px-4 py-2 text-sm font-bold uppercase tracking-wide mb-6">
+                  Commercial Structure
+                </div>
+
+                <h2 className="text-3xl font-bold text-slate-900 mb-5">
+                  Buy one tool or buy the full platform
+                </h2>
+
+                <ul className="space-y-4 text-slate-700 text-lg">
+                  <li>
+                    <span className="font-bold text-slate-900">Standalone tools</span>{" "}
+                    for focused buyer needs
+                  </li>
+                  <li>
+                    <span className="font-bold text-slate-900">Bundled platform</span>{" "}
+                    for one connected workflow
+                  </li>
+                  <li>
+                    <span className="font-bold text-slate-900">Ad Studio outputs</span>{" "}
+                    for activation-ready campaign packages
+                  </li>
+                  <li>
+                    <span className="font-bold text-slate-900">Flexible expansion</span>{" "}
+                    from one product into the full ecosystem
+                  </li>
+                </ul>
+
+                <div className="mt-8 rounded-2xl border border-lime-200 bg-lime-50 p-5">
+                  <p className="text-sm font-bold uppercase tracking-wide text-lime-700 mb-2">
+                    Best Positioning
+                  </p>
+                  <p className="text-slate-800 font-medium">
+                    TerravaultIQ is an audience intelligence company with
+                    standalone tools and one integrated platform offer.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="tools" className="px-6 pb-20">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-10">
+            <p className="text-teal-700 font-bold uppercase tracking-wide text-sm mb-3">
+              Platform Modules
+            </p>
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+              The tools inside the TerravaultIQ ecosystem
+            </h2>
+            <p className="text-slate-600 text-lg max-w-3xl">
+              Each module can be sold on its own or connected into the full
+              TerravaultIQ operating system.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+            {tools.map((tool) => (
+              <div
+                key={tool.title}
+                className={`rounded-[24px] border bg-gradient-to-br ${tool.accent} p-6 shadow-sm`}
+              >
+                <h3 className="text-2xl font-bold text-slate-900 mb-3">
+                  {tool.title}
+                </h3>
+                <p className="text-slate-700 mb-6">{tool.description}</p>
+                <button className="inline-flex rounded-full bg-slate-900 text-white px-5 py-3 font-semibold hover:bg-slate-800 transition">
+                  Open Tool
+                </button>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="px-6 pb-20">
-        <div className="max-w-6xl mx-auto rounded-3xl border border-white/10 bg-white/5 p-8 md:p-10">
-          <div className="grid md:grid-cols-3 gap-8">
-            <div>
-              <h3 className="text-2xl font-semibold text-lime-400 mb-3">
-                Buy Standalone
-              </h3>
-              <p className="text-gray-300">
-                Purchase only the exact tool you need today and expand later.
+      <section id="workflow" className="px-6 pb-20">
+        <div className="max-w-7xl mx-auto rounded-[28px] border border-slate-200 bg-white p-8 md:p-10 shadow-sm">
+          <div className="mb-8">
+            <p className="text-teal-700 font-bold uppercase tracking-wide text-sm mb-3">
+              Workflow
+            </p>
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+              A clean path from strategy to activation
+            </h2>
+            <p className="text-slate-600 text-lg max-w-3xl">
+              The full platform connects multiple buyer needs into one consistent flow.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-4 gap-5">
+            <div className="rounded-2xl border border-lime-200 bg-lime-50 p-5">
+              <div className="text-sm font-bold uppercase text-lime-700 mb-2">Step 1</div>
+              <h3 className="text-xl font-bold mb-2">Find</h3>
+              <p className="text-slate-700">
+                Discover prospects and identify market opportunities.
               </p>
             </div>
 
-            <div>
-              <h3 className="text-2xl font-semibold text-cyan-400 mb-3">
-                Activate Faster
-              </h3>
-              <p className="text-gray-300">
-                Move from data to audience to ad-ready outputs without fragmented workflows.
+            <div className="rounded-2xl border border-cyan-200 bg-cyan-50 p-5">
+              <div className="text-sm font-bold uppercase text-cyan-700 mb-2">Step 2</div>
+              <h3 className="text-xl font-bold mb-2">Build</h3>
+              <p className="text-slate-700">
+                Create custom audiences and define targeting logic.
               </p>
             </div>
 
-            <div>
-              <h3 className="text-2xl font-semibold text-orange-400 mb-3">
-                Run the Full System
-              </h3>
-              <p className="text-gray-300">
-                Unlock the all-in-one TerravaultIQ platform for a connected marketing engine.
+            <div className="rounded-2xl border border-orange-200 bg-orange-50 p-5">
+              <div className="text-sm font-bold uppercase text-orange-700 mb-2">Step 3</div>
+              <h3 className="text-xl font-bold mb-2">Target</h3>
+              <p className="text-slate-700">
+                Apply geo and lookback intelligence to sharpen reach.
               </p>
             </div>
+
+            <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-5">
+              <div className="text-sm font-bold uppercase text-emerald-700 mb-2">Step 4</div>
+              <h3 className="text-xl font-bold mb-2">Activate</h3>
+              <p className="text-slate-700">
+                Generate ads, packages, and activation-ready outputs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="offers" className="px-6 pb-24">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-6">
+          <div className="rounded-[28px] border border-slate-200 bg-white p-8 shadow-sm">
+            <p className="text-sm font-bold uppercase tracking-wide text-teal-700 mb-3">
+              Standalone Offer
+            </p>
+            <h3 className="text-3xl font-bold text-slate-900 mb-4">
+              Buy only what you need
+            </h3>
+            <p className="text-slate-700 text-lg">
+              Sell each tool independently for buyers who need a focused solution
+              without the full platform commitment.
+            </p>
+          </div>
+
+          <div className="rounded-[28px] border border-slate-900 bg-slate-900 text-white p-8 shadow-[0_20px_60px_rgba(15,23,42,0.18)]">
+            <p className="text-sm font-bold uppercase tracking-wide text-lime-300 mb-3">
+              Full Platform Offer
+            </p>
+            <h3 className="text-3xl font-bold mb-4">
+              License the entire TerravaultIQ ecosystem
+            </h3>
+            <p className="text-slate-300 text-lg mb-6">
+              For buyers who want connected lead generation, audience creation,
+              geo targeting, lookback intelligence, and ad production in one system.
+            </p>
+            <button className="rounded-full bg-lime-500 text-white px-6 py-3 font-bold hover:bg-lime-600 transition">
+              Request Platform Demo
+            </button>
           </div>
         </div>
       </section>
