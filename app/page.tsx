@@ -1,106 +1,329 @@
+import Link from "next/link";
+
+const tools = [
+  {
+    title: "Lead Intelligence",
+    description:
+      "Build prospect lists, uncover high-value opportunities, and launch targeted outreach from real market intelligence.",
+    accent: "border-lime-200 bg-lime-50",
+    cta: "Launch Tool",
+    href: "https://terravaultiq-lead-intelligence-adxpkdfgcbl45ujd3sdkqo.streamlit.app/",
+    external: true,
+  },
+  {
+    title: "Audience Builder",
+    description:
+      "Create activation-ready audiences using targeting logic, segmentation rules, and layered data inputs.",
+    accent: "border-cyan-200 bg-cyan-50",
+    cta: "Coming Soon",
+    href: "#",
+    external: false,
+  },
+  {
+    title: "Geo Intelligence",
+    description:
+      "Target by radius, territory, and geography for stronger local performance and smarter market coverage.",
+    accent: "border-orange-200 bg-orange-50",
+    cta: "Coming Soon",
+    href: "#",
+    external: false,
+  },
+  {
+    title: "Lookback Intelligence",
+    description:
+      "Use past visit behavior and movement signals to build more valuable audiences and sharper campaigns.",
+    accent: "border-emerald-200 bg-emerald-50",
+    cta: "Coming Soon",
+    href: "#",
+    external: false,
+  },
+  {
+    title: "Ad Studio",
+    description:
+      "Generate ad copy, creative prompts, and downloadable activation packages from one connected system.",
+    accent: "border-yellow-200 bg-yellow-50",
+    cta: "Coming Soon",
+    href: "#",
+    external: false,
+  },
+];
+
 export default function PlatformPage() {
   return (
-    <main className="min-h-screen bg-black text-white px-6 py-16">
-      
-      {/* Header */}
-      <div className="max-w-6xl mx-auto text-center mb-16">
-        <h1 className="text-5xl font-bold mb-4">
-          TerravaultIQ Platform
-        </h1>
-        <p className="text-gray-400 text-lg">
-          A unified intelligence system for modern digital marketing.
-        </p>
-      </div>
+    <main className="min-h-screen bg-[#f4f6f1] text-slate-900">
+      {/* HEADER */}
+      <header className="sticky top-0 z-50 bg-[#f4f6f1]/90 backdrop-blur border-b border-slate-200">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+          <Link href="/" className="flex items-center gap-3">
+            <div className="bg-white rounded-2xl px-4 py-3 shadow-sm border border-slate-200">
+              <img
+                src="/logo.png"
+                alt="TerravaultIQ"
+                className="h-12 md:h-14 w-auto object-contain"
+              />
+            </div>
+          </Link>
 
-      {/* Tools Grid */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        
-        {/* Lead Intelligence */}
-        <div className="border border-gray-800 rounded-2xl p-6 bg-[#0a0a0a]">
-          <h2 className="text-2xl font-semibold mb-2">
-            Lead Intelligence
-          </h2>
-          <p className="text-gray-400 mb-6">
-            Discover high-value prospects and build targeted outreach lists instantly.
-          </p>
+          <nav className="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-800">
+            <Link href="/" className="hover:text-teal-700 transition">
+              Home
+            </Link>
+            <a href="#tools" className="hover:text-teal-700 transition">
+              Products
+            </a>
+            <Link href="/platform" className="hover:text-teal-700 transition">
+              Platform
+            </Link>
+            <a href="#offers" className="hover:text-teal-700 transition">
+              Pricing
+            </a>
+            <a href="#faq" className="hover:text-teal-700 transition">
+              FAQ
+            </a>
+          </nav>
 
-          <a
-            href="https://terravaultiq-lead-intelligence-adxpkdfgcbl45ujd3sdkqo.streamlit.app/"
-            target="_blank"
-            className="inline-block bg-green-500 hover:bg-green-400 text-black px-6 py-3 rounded-lg font-semibold transition"
-          >
-            Launch Tool →
-          </a>
+          <div className="flex items-center gap-3">
+            <button className="hidden md:inline-flex rounded-full border border-teal-700 text-teal-800 px-6 py-3 font-semibold hover:bg-teal-50 transition">
+              Login
+            </button>
+            <button className="rounded-full bg-lime-500 text-white px-6 py-3 font-semibold hover:bg-lime-600 transition shadow-[0_10px_30px_rgba(132,204,22,0.22)]">
+              Open Platform
+            </button>
+          </div>
         </div>
 
-        {/* Audience Builder */}
-        <div className="border border-gray-800 rounded-2xl p-6 bg-[#0a0a0a]">
-          <h2 className="text-2xl font-semibold mb-2">
-            Audience Builder
-          </h2>
-          <p className="text-gray-400 mb-6">
-            Create hyper-targeted audiences using location, behavior, and intent data.
-          </p>
+        <div className="h-[3px] bg-gradient-to-r from-cyan-500 via-lime-500 to-orange-400" />
+      </header>
 
-          <button className="bg-gray-800 text-gray-400 px-6 py-3 rounded-lg">
-            Coming Soon
-          </button>
+      {/* HERO */}
+      <section className="relative overflow-hidden">
+        <div className="absolute inset-0 pointer-events-none">
+          <div className="absolute top-12 left-0 h-[420px] w-[420px] rounded-full bg-cyan-200/40 blur-3xl" />
+          <div className="absolute top-16 right-0 h-[420px] w-[420px] rounded-full bg-lime-200/35 blur-3xl" />
+          <div className="absolute bottom-0 left-1/3 h-[280px] w-[280px] rounded-full bg-orange-100/30 blur-3xl" />
         </div>
 
-        {/* Geo Intelligence */}
-        <div className="border border-gray-800 rounded-2xl p-6 bg-[#0a0a0a]">
-          <h2 className="text-2xl font-semibold mb-2">
-            Geo Intelligence
-          </h2>
-          <p className="text-gray-400 mb-6">
-            Map and analyze geographic opportunities for local marketing dominance.
-          </p>
+        <div className="relative max-w-7xl mx-auto px-6 py-20 lg:py-24">
+          <div className="grid lg:grid-cols-2 gap-14 items-start">
+            <div>
+              <div className="inline-flex rounded-full bg-teal-100 text-teal-800 px-5 py-3 text-sm font-bold tracking-wide uppercase mb-8">
+                TerravaultIQ Platform
+              </div>
 
-          <button className="bg-gray-800 text-gray-400 px-6 py-3 rounded-lg">
-            Coming Soon
-          </button>
+              <h1 className="text-5xl md:text-7xl font-bold leading-[0.95] tracking-tight text-slate-900">
+                The system built to
+                <br />
+                help you run
+                <br />
+                <span className="text-teal-500">smarter tools</span>{" "}
+                <span className="text-lime-500">under one</span>{" "}
+                <span className="text-orange-400">platform</span>
+              </h1>
+
+              <p className="mt-8 text-lg md:text-xl text-slate-700 max-w-2xl leading-relaxed">
+                TerravaultIQ brings Lead Intelligence, Audience Builder, Geo
+                Intelligence, Lookback Intelligence, and Ad Studio into one
+                premium operating system. Buy a standalone tool or unlock the
+                full platform.
+              </p>
+
+              <div className="mt-10 flex flex-wrap gap-4">
+                <a
+                  href="https://terravaultiq-lead-intelligence-adxpkdfgcbl45ujd3sdkqo.streamlit.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="rounded-full bg-lime-500 text-white px-7 py-4 font-bold hover:bg-lime-600 transition shadow-[0_10px_30px_rgba(132,204,22,0.25)]"
+                >
+                  Launch Lead Intelligence
+                </a>
+
+                <Link
+                  href="/"
+                  className="rounded-full border border-slate-300 bg-white px-7 py-4 font-semibold hover:bg-slate-50 transition"
+                >
+                  Back to Home
+                </Link>
+              </div>
+            </div>
+
+            <div className="rounded-[28px] bg-white/90 backdrop-blur border border-slate-200 shadow-[0_25px_80px_rgba(15,23,42,0.10)] p-8">
+              <div className="inline-flex rounded-full bg-teal-100 text-teal-800 px-4 py-2 text-sm font-bold uppercase tracking-wide mb-6">
+                Platform Overview
+              </div>
+
+              <h2 className="text-3xl font-bold text-slate-900 mb-5">
+                A cleaner path from data to activation
+              </h2>
+
+              <ul className="space-y-4 text-slate-700 text-lg">
+                <li>
+                  <span className="font-bold text-slate-900">Lead Intelligence</span>{" "}
+                  for prospect discovery and list building
+                </li>
+                <li>
+                  <span className="font-bold text-slate-900">Audience Builder</span>{" "}
+                  for custom segmentation and targeting
+                </li>
+                <li>
+                  <span className="font-bold text-slate-900">Geo Intelligence</span>{" "}
+                  for location-based campaign precision
+                </li>
+                <li>
+                  <span className="font-bold text-slate-900">Lookback Intelligence</span>{" "}
+                  for past-visit audience creation
+                </li>
+                <li>
+                  <span className="font-bold text-slate-900">Ad Studio</span>{" "}
+                  for creative generation and activation-ready outputs
+                </li>
+              </ul>
+
+              <div className="mt-8 rounded-2xl border border-lime-200 bg-lime-50 p-5">
+                <p className="text-sm font-bold uppercase tracking-wide text-lime-700 mb-2">
+                  Full Platform Offer
+                </p>
+                <p className="text-slate-800 font-medium">
+                  Sell each tool independently or position TerravaultIQ as one
+                  connected audience intelligence and activation platform.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
 
-        {/* Lookback Intelligence */}
-        <div className="border border-gray-800 rounded-2xl p-6 bg-[#0a0a0a]">
-          <h2 className="text-2xl font-semibold mb-2">
-            Lookback Intelligence
-          </h2>
-          <p className="text-gray-400 mb-6">
-            Analyze past campaign performance to uncover hidden growth patterns.
-          </p>
+      {/* TOOLS */}
+      <section id="tools" className="px-6 pb-20">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-10">
+            <p className="text-teal-700 font-bold uppercase tracking-wide text-sm mb-3">
+              Platform Modules
+            </p>
+            <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4">
+              The tools inside the TerravaultIQ ecosystem
+            </h2>
+            <p className="text-slate-600 text-lg max-w-3xl">
+              Each product can stand on its own or work together as part of the
+              full TerravaultIQ platform.
+            </p>
+          </div>
 
-          <button className="bg-gray-800 text-gray-400 px-6 py-3 rounded-lg">
-            Coming Soon
-          </button>
+          <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6">
+            {tools.map((tool) => (
+              <div
+                key={tool.title}
+                className={`rounded-[24px] border ${tool.accent} p-6 shadow-sm`}
+              >
+                <h3 className="text-2xl font-bold text-slate-900 mb-3">
+                  {tool.title}
+                </h3>
+                <p className="text-slate-700 mb-6">{tool.description}</p>
+
+                {tool.external ? (
+                  <a
+                    href={tool.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex rounded-full bg-slate-900 text-white px-5 py-3 font-semibold hover:bg-slate-800 transition"
+                  >
+                    {tool.cta}
+                  </a>
+                ) : (
+                  <button className="inline-flex rounded-full bg-slate-200 text-slate-500 px-5 py-3 font-semibold cursor-not-allowed">
+                    {tool.cta}
+                  </button>
+                )}
+              </div>
+            ))}
+          </div>
         </div>
+      </section>
 
-        {/* Ad Studio */}
-        <div className="border border-gray-800 rounded-2xl p-6 bg-[#0a0a0a]">
-          <h2 className="text-2xl font-semibold mb-2">
-            Ad Studio
-          </h2>
-          <p className="text-gray-400 mb-6">
-            Generate and launch high-converting ads powered by AI insights.
-          </p>
+      {/* OFFERS */}
+      <section id="offers" className="px-6 pb-20">
+        <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-6">
+          <div className="rounded-[28px] border border-slate-200 bg-white p-8 shadow-sm">
+            <p className="text-sm font-bold uppercase tracking-wide text-teal-700 mb-3">
+              Standalone Offer
+            </p>
+            <h3 className="text-3xl font-bold text-slate-900 mb-4">
+              Buy only what you need
+            </h3>
+            <p className="text-slate-700 text-lg">
+              Start with Lead Intelligence today and expand into more tools as
+              your platform usage grows.
+            </p>
+          </div>
 
-          <button className="bg-gray-800 text-gray-400 px-6 py-3 rounded-lg">
-            Coming Soon
-          </button>
+          <div className="rounded-[28px] border border-slate-900 bg-slate-900 text-white p-8 shadow-[0_20px_60px_rgba(15,23,42,0.18)]">
+            <p className="text-sm font-bold uppercase tracking-wide text-lime-300 mb-3">
+              Full Platform Offer
+            </p>
+            <h3 className="text-3xl font-bold mb-4">
+              License the entire TerravaultIQ ecosystem
+            </h3>
+            <p className="text-slate-300 text-lg mb-6">
+              Position TerravaultIQ as the premium all-in-one platform for lead
+              discovery, audience targeting, geo intelligence, lookback
+              intelligence, and ad creation.
+            </p>
+            <button className="rounded-full bg-lime-500 text-white px-6 py-3 font-bold hover:bg-lime-600 transition">
+              Request Platform Demo
+            </button>
+          </div>
         </div>
+      </section>
 
-      </div>
+      {/* FAQ */}
+      <section id="faq" className="px-6 pb-24">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-8">
+            Frequently Asked Questions
+          </h2>
 
-      {/* Bottom CTA */}
-      <div className="text-center mt-20">
-        <a
-          href="/"
-          className="text-green-400 hover:underline"
-        >
-          ← Back to Home
-        </a>
-      </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="rounded-2xl border border-slate-200 bg-white p-6">
+              <h3 className="font-bold text-lg mb-2">
+                Can I buy just one TerravaultIQ tool?
+              </h3>
+              <p className="text-slate-700">
+                Yes. Each solution can be sold independently or bundled into the
+                full platform.
+              </p>
+            </div>
 
+            <div className="rounded-2xl border border-slate-200 bg-white p-6">
+              <h3 className="font-bold text-lg mb-2">
+                What is live right now?
+              </h3>
+              <p className="text-slate-700">
+                Lead Intelligence is live now. The other tools are being added
+                into the platform ecosystem.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-slate-200 bg-white p-6">
+              <h3 className="font-bold text-lg mb-2">
+                Can the platform create ad outputs too?
+              </h3>
+              <p className="text-slate-700">
+                Yes. Ad Studio is part of the platform vision and will support
+                activation-ready ad packages.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-slate-200 bg-white p-6">
+              <h3 className="font-bold text-lg mb-2">
+                Is TerravaultIQ built for standalone use or full workflow use?
+              </h3>
+              <p className="text-slate-700">
+                Both. Buyers can purchase one solution or use TerravaultIQ as a
+                connected growth infrastructure platform.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   );
 }
