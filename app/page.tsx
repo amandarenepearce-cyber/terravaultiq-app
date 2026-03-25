@@ -1,5 +1,8 @@
 import Link from "next/link";
 
+const LEAD_TOOL_URL =
+  "https://terravaultiq-lead-intelligence-adxpkdfgcbl45ujd3sdkqo.streamlit.app/";
+
 const tools = [
   {
     title: "Lead Intelligence",
@@ -7,7 +10,7 @@ const tools = [
       "Build prospect lists, uncover high-value opportunities, and launch targeted outreach from real market intelligence.",
     accent: "border-lime-200 bg-lime-50",
     cta: "Launch Tool",
-    href: "https://terravaultiq-lead-intelligence-adxpkdfgcbl45ujd3sdkqo.streamlit.app/",
+    href: LEAD_TOOL_URL,
     external: true,
   },
   {
@@ -86,9 +89,15 @@ export default function PlatformPage() {
             <button className="hidden md:inline-flex rounded-full border border-teal-700 text-teal-800 px-6 py-3 font-semibold hover:bg-teal-50 transition">
               Login
             </button>
-            <button className="rounded-full bg-lime-500 text-white px-6 py-3 font-semibold hover:bg-lime-600 transition shadow-[0_10px_30px_rgba(132,204,22,0.22)]">
-              Open Platform
-            </button>
+
+            <a
+              href={LEAD_TOOL_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="rounded-full bg-lime-500 text-white px-6 py-3 font-semibold hover:bg-lime-600 transition shadow-[0_10px_30px_rgba(132,204,22,0.22)]"
+            >
+              Launch Lead Tool
+            </a>
           </div>
         </div>
 
@@ -129,7 +138,7 @@ export default function PlatformPage() {
 
               <div className="mt-10 flex flex-wrap gap-4">
                 <a
-                  href="https://terravaultiq-lead-intelligence-adxpkdfgcbl45ujd3sdkqo.streamlit.app/"
+                  href={LEAD_TOOL_URL}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="rounded-full bg-lime-500 text-white px-7 py-4 font-bold hover:bg-lime-600 transition shadow-[0_10px_30px_rgba(132,204,22,0.25)]"
@@ -157,19 +166,27 @@ export default function PlatformPage() {
 
               <ul className="space-y-4 text-slate-700 text-lg">
                 <li>
-                  <span className="font-bold text-slate-900">Lead Intelligence</span>{" "}
+                  <span className="font-bold text-slate-900">
+                    Lead Intelligence
+                  </span>{" "}
                   for prospect discovery and list building
                 </li>
                 <li>
-                  <span className="font-bold text-slate-900">Audience Builder</span>{" "}
+                  <span className="font-bold text-slate-900">
+                    Audience Builder
+                  </span>{" "}
                   for custom segmentation and targeting
                 </li>
                 <li>
-                  <span className="font-bold text-slate-900">Geo Intelligence</span>{" "}
+                  <span className="font-bold text-slate-900">
+                    Geo Intelligence
+                  </span>{" "}
                   for location-based campaign precision
                 </li>
                 <li>
-                  <span className="font-bold text-slate-900">Lookback Intelligence</span>{" "}
+                  <span className="font-bold text-slate-900">
+                    Lookback Intelligence
+                  </span>{" "}
                   for past-visit audience creation
                 </li>
                 <li>
@@ -229,7 +246,10 @@ export default function PlatformPage() {
                     {tool.cta}
                   </a>
                 ) : (
-                  <button className="inline-flex rounded-full bg-slate-200 text-slate-500 px-5 py-3 font-semibold cursor-not-allowed">
+                  <button
+                    type="button"
+                    className="inline-flex rounded-full bg-slate-200 text-slate-500 px-5 py-3 font-semibold cursor-not-allowed"
+                  >
                     {tool.cta}
                   </button>
                 )}
@@ -267,7 +287,10 @@ export default function PlatformPage() {
               discovery, audience targeting, geo intelligence, lookback
               intelligence, and ad creation.
             </p>
-            <button className="rounded-full bg-lime-500 text-white px-6 py-3 font-bold hover:bg-lime-600 transition">
+            <button
+              type="button"
+              className="rounded-full bg-lime-500 text-white px-6 py-3 font-bold hover:bg-lime-600 transition"
+            >
               Request Platform Demo
             </button>
           </div>
@@ -293,9 +316,7 @@ export default function PlatformPage() {
             </div>
 
             <div className="rounded-2xl border border-slate-200 bg-white p-6">
-              <h3 className="font-bold text-lg mb-2">
-                What is live right now?
-              </h3>
+              <h3 className="font-bold text-lg mb-2">What is live right now?</h3>
               <p className="text-slate-700">
                 Lead Intelligence is live now. The other tools are being added
                 into the platform ecosystem.
