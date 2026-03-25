@@ -12,6 +12,8 @@ const tools = [
     cta: "Launch Tool",
     href: LEAD_TOOL_URL,
     external: true,
+    status: "Live Now",
+    statusColor: "text-lime-700 bg-lime-100",
   },
   {
     title: "Audience Builder",
@@ -21,6 +23,8 @@ const tools = [
     cta: "Coming Soon",
     href: "#",
     external: false,
+    status: "Coming Soon",
+    statusColor: "text-cyan-700 bg-cyan-100",
   },
   {
     title: "Geo Intelligence",
@@ -30,6 +34,8 @@ const tools = [
     cta: "Coming Soon",
     href: "#",
     external: false,
+    status: "Coming Soon",
+    statusColor: "text-orange-700 bg-orange-100",
   },
   {
     title: "Lookback Intelligence",
@@ -39,6 +45,8 @@ const tools = [
     cta: "Coming Soon",
     href: "#",
     external: false,
+    status: "Coming Soon",
+    statusColor: "text-emerald-700 bg-emerald-100",
   },
   {
     title: "Ad Studio",
@@ -48,15 +56,17 @@ const tools = [
     cta: "Coming Soon",
     href: "#",
     external: false,
+    status: "Coming Soon",
+    statusColor: "text-yellow-700 bg-yellow-100",
   },
 ];
 
 export default function PlatformPage() {
   return (
     <main className="min-h-screen bg-[#f4f6f1] text-slate-900">
-      {/* HEADER */}
+      {/* Header */}
       <header className="sticky top-0 z-50 bg-[#f4f6f1]/90 backdrop-blur border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between gap-6">
           <Link href="/" className="flex items-center gap-3">
             <div className="bg-white rounded-2xl px-4 py-3 shadow-sm border border-slate-200">
               <img
@@ -104,12 +114,12 @@ export default function PlatformPage() {
         <div className="h-[3px] bg-gradient-to-r from-cyan-500 via-lime-500 to-orange-400" />
       </header>
 
-      {/* HERO */}
+      {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-12 left-0 h-[420px] w-[420px] rounded-full bg-cyan-200/40 blur-3xl" />
-          <div className="absolute top-16 right-0 h-[420px] w-[420px] rounded-full bg-lime-200/35 blur-3xl" />
-          <div className="absolute bottom-0 left-1/3 h-[280px] w-[280px] rounded-full bg-orange-100/30 blur-3xl" />
+          <div className="absolute top-10 left-0 h-[440px] w-[440px] rounded-full bg-cyan-200/40 blur-3xl" />
+          <div className="absolute top-16 right-0 h-[440px] w-[440px] rounded-full bg-lime-200/35 blur-3xl" />
+          <div className="absolute bottom-0 left-1/3 h-[300px] w-[300px] rounded-full bg-orange-100/30 blur-3xl" />
         </div>
 
         <div className="relative max-w-7xl mx-auto px-6 py-20 lg:py-24">
@@ -120,20 +130,20 @@ export default function PlatformPage() {
               </div>
 
               <h1 className="text-5xl md:text-7xl font-bold leading-[0.95] tracking-tight text-slate-900">
-                The system built to
+                One platform
                 <br />
-                help you run
+                for
                 <br />
-                <span className="text-teal-500">smarter tools</span>{" "}
-                <span className="text-lime-500">under one</span>{" "}
-                <span className="text-orange-400">platform</span>
+                <span className="text-teal-500">audience intelligence</span>{" "}
+                <span className="text-lime-500">and</span>{" "}
+                <span className="text-orange-400">activation</span>
               </h1>
 
               <p className="mt-8 text-lg md:text-xl text-slate-700 max-w-2xl leading-relaxed">
                 TerravaultIQ brings Lead Intelligence, Audience Builder, Geo
                 Intelligence, Lookback Intelligence, and Ad Studio into one
-                premium operating system. Buy a standalone tool or unlock the
-                full platform.
+                premium operating system. Sell the tools individually or
+                position the full platform as your all-in-one growth engine.
               </p>
 
               <div className="mt-10 flex flex-wrap gap-4">
@@ -161,7 +171,7 @@ export default function PlatformPage() {
               </div>
 
               <h2 className="text-3xl font-bold text-slate-900 mb-5">
-                A cleaner path from data to activation
+                A cleaner path from prospecting to activation
               </h2>
 
               <ul className="space-y-4 text-slate-700 text-lg">
@@ -200,8 +210,9 @@ export default function PlatformPage() {
                   Full Platform Offer
                 </p>
                 <p className="text-slate-800 font-medium">
-                  Sell each tool independently or position TerravaultIQ as one
-                  connected audience intelligence and activation platform.
+                  Sell each tool independently or package TerravaultIQ as one
+                  connected audience intelligence and marketing activation
+                  platform.
                 </p>
               </div>
             </div>
@@ -209,7 +220,7 @@ export default function PlatformPage() {
         </div>
       </section>
 
-      {/* TOOLS */}
+      {/* Tools */}
       <section id="tools" className="px-6 pb-20">
         <div className="max-w-7xl mx-auto">
           <div className="mb-10">
@@ -220,8 +231,8 @@ export default function PlatformPage() {
               The tools inside the TerravaultIQ ecosystem
             </h2>
             <p className="text-slate-600 text-lg max-w-3xl">
-              Each product can stand on its own or work together as part of the
-              full TerravaultIQ platform.
+              Each module can stand alone or work together inside the full
+              TerravaultIQ platform.
             </p>
           </div>
 
@@ -231,9 +242,17 @@ export default function PlatformPage() {
                 key={tool.title}
                 className={`rounded-[24px] border ${tool.accent} p-6 shadow-sm`}
               >
-                <h3 className="text-2xl font-bold text-slate-900 mb-3">
-                  {tool.title}
-                </h3>
+                <div className="flex items-center justify-between gap-3 mb-4">
+                  <h3 className="text-2xl font-bold text-slate-900">
+                    {tool.title}
+                  </h3>
+                  <span
+                    className={`text-xs font-bold uppercase tracking-wide px-3 py-1 rounded-full ${tool.statusColor}`}
+                  >
+                    {tool.status}
+                  </span>
+                </div>
+
                 <p className="text-slate-700 mb-6">{tool.description}</p>
 
                 {tool.external ? (
@@ -259,7 +278,7 @@ export default function PlatformPage() {
         </div>
       </section>
 
-      {/* OFFERS */}
+      {/* Offers */}
       <section id="offers" className="px-6 pb-20">
         <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-6">
           <div className="rounded-[28px] border border-slate-200 bg-white p-8 shadow-sm">
